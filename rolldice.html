@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>d&d</h1>
+    <div id="str"></div>
+    <div id="dex"></div>
+    <div id="con"></div>
+    <div id="int"></div>
+    <div id="wis"></div>
+    <div id="cha"></div>
+    <button onclick="Rollchar()" ondblclick="Cheat"></button>
+    <script>
+
+        function RollDice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+        function Rollstat(){
+        let d1 = RollDice();
+        let d2 = RollDice();  
+        let d3 = RollDice();
+        let d4 = RollDice();
+
+        let total = d1 + d2 + d3 + d4;
+
+        let laagste = Math.min(d1, d2, d3, d4);
+
+        let result = total - laagste; 
+        return result;
+        }
+        let strEl = document.getElementById("str");
+        strEl.textContent = "STR: " + Rollstat();
+
+        let dexEl = document.getElementById("dex");
+        dexEl.textContent = "DEX: " + Rollstat();
+
+        let conEl = document.getElementById("con");
+        conEl.textContent = "CON: " + Rollstat();
+
+        let intEl = document.getElementById("int");
+        intEl.textContent = "INT: " + Rollstat();
+
+        let wisEl = document.getElementById("wis");
+        wisEl.textContent = "WIS: " + Rollstat();
+
+        let chaEl = document.getElementById("cha");
+        chaEl.textContent = "CHA: " + Rollstat();
+    </script>
+</body>
+</html>

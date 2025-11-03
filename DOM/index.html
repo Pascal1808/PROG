@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Hello World!</h1>
+        <p id="p1">Max, de nieuwsgierige hond, ontdekte op een dag een geheime tuin vol kleurrijke bloemen. Terwijl hij speelde, vond hij een oude sleutel die naar een verborgen schat leidde</p>
+        <img src="https://picsum.photos/300/300" alt="een afbeelding">
+    </div>
+</body>
+<script>
+    console.log(document.documentElement.lang);
+    if(document.documentElement.lang == "en"){
+        document.getElementById("p1").innerHTML = "Max, the curious dog, discovered a secret garden full of colorful flowers one day. While playing, he found an old key that led to a hidden treasure.";
+    }
+    if(document.documentElement.lang == "jp"){
+        document.getElementById("p1").innerHTML = "好奇心旺盛な犬のマックスは、ある日色とりどりの花でいっぱいの秘密の庭を発見しました。遊んでいるうちに、彼は隠された宝物につながる古い鍵を見つけました。"
+    }
+</script>
+</html>
